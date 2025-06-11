@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume & Cover Letter Generator</title>
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 AI Resume & Cover Letter Generator</h1>
+            <p>Create professional, tailored resumes and cover letters powered by AI</p>
+        </div>
+
+        <div class="main-content">
+            <div class="input-section">
+                <form id="resumeForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required placeholder="e.g., Muhammad Shahzaib">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="+92 300 1234567">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="City, Country">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetRole">Target Job Role *</label>
+                        <input type="text" id="targetRole" required placeholder="e.g., Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience">
+                            <option value="0-1">0-1 years</option>
+                            <option value="2-3" selected>2-3 years</option>
+                            <option value="4-5">4-5 years</option>
+                            <option value="6-10">6-10 years</option>
+                            <option value="10+">10+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education *</label>
+                        <textarea id="education" required
+                            placeholder="e.g., BS in Computer Science from XYZ University (2020-2024)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillInput">Skills (Press Enter to add)</label>
+                        <input type="text" id="skillInput" placeholder="Type a skill and press Enter">
+                        <div class="skills-input" id="skillsContainer"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="workExperience">Work Experience</label>
+                        <textarea id="workExperience"
+                            placeholder="e.g., Software Developer at XYZ Tech (2022-2024) - Developed web applications using React and Node.js"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" placeholder="Company you're applying to">
+                    </div>
+                    <button type="submit" class="btn">🎯 Generate Resume & Cover Letter</button>
+                </form>
+            </div>
+
+            <div class="output-section">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('resume')">📄 Resume</div>
+                    <div class="tab" onclick="switchTab('coverLetter')">📝 Cover Letter</div>
+                </div>
+
+                <div id="resumeTab" class="tab-content active">
+                    <div class="preview-container">
+                        <div class="document-header">
+                            <div class="document-title">Resume Preview</div>
+                            <button class="btn btn-secondary" onclick="downloadPDF('resume')">📥 Download PDF</button>
+                        </div>
+                        <div id="resumePreview" class="document-content">
+                            <div style="text-align: center; color: #666; padding: 40px;">
+                                Fill out the form to generate your AI-powered resume
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="coverLetterTab" class="tab-content">
+                    <div class="preview-container">
+                        <div class="document-header">
+                            <div class="document-title">Cover Letter Preview</div>
+                            <button class="btn btn-secondary" onclick="downloadPDF('coverLetter')">📥 Download
+                                PDF</button>
+                        </div>
+                        <div id="coverLetterPreview" class="document-content">
+                            <div style="text-align: center; color: #666; padding: 40px;">
+                                Fill out the form to generate your AI-powered cover letter
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
