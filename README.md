@@ -11,13 +11,6 @@ This is a web application that allows users to generate professional, AI-powered
 - Fully responsive and ready for deployment
 - Uses `.env` file for secure API key management
 
----
-
-## 🌐 Live Demo (optional)
-
-> Add your deployed link here once hosted, e.g., Render or Vercel.
-
----
 
 ## 🔑 How to Get Your Gemini API Key
 
@@ -27,12 +20,3 @@ This is a web application that allows users to generate professional, AI-powered
 4. Copy the key
 5. Use it in the `.env` file as shown below
 
----
-
-## 🛠️ Installation & Setup
-
-### 1. Clone this repository
-
-```bash
-git clone https://github.com/yourusername/ai-resume-generator.git
-cd ai-resume-generator
